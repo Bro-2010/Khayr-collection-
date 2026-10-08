@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KHAYR: quality clothing for men and women. Order easily on WhatsApp with fast delivery.">
+  <title>KHAYR | Clothing for Men &amp; Women</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="demo-bar">Demo store. Payments are simulated and no money is charged.</div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">KHAYR</a>
+
+      <nav class="nav" id="nav">
+        <a href="#shop" data-filter="women">Women</a>
+        <a href="#shop" data-filter="men">Men</a>
+        <a href="#how">How to order</a>
+        <a href="#about">Our story</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="bag-btn" id="bagBtn" aria-label="Open your bag">
+          <span>Bag</span>
+          <span class="bag-count" id="bagCount">0</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">New season is here</p>
+          <h1>Everyday clothing, made to look good and feel better.</h1>
+          <p class="lead">Quality pieces for men and women, from relaxed everyday wear to elegant outfits. Choose your size, then order in a few taps on WhatsApp.</p>
+          <div class="hero-actions">
+            <a href="#shop" class="btn btn-gold" data-filter="women">Shop Women</a>
+            <a href="#shop" class="btn btn-outline-light" data-filter="men">Shop Men</a>
+          </div>
+        </div>
+        <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ===== Trust bar ===== -->
+    <section class="trust">
+      <div class="container trust-inner">
+        <div><strong>Free delivery</strong><span>on orders over GH₵ 400</span></div>
+        <div><strong>Easy exchanges</strong><span>within 7 days</span></div>
+        <div><strong>Quality fabrics</strong><span>tested for comfort</span></div>
+        <div><strong>Order on WhatsApp</strong><span>quick and simple</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Categories ===== -->
+    <section class="categories">
+      <div class="container cat-grid">
+        <a href="#shop" class="cat-tile" data-filter="women">
+          <div class="cat-art" id="tileWomen" aria-hidden="true"></div>
+          <div class="cat-label">
+            <h2>Women</h2>
+            <span>Shop women's clothing &rarr;</span>
+          </div>
+        </a>
+        <a href="#shop" class="cat-tile" data-filter="men">
+          <div class="cat-art" id="tileMen" aria-hidden="true"></div>
+          <div class="cat-label">
+            <h2>Men</h2>
+            <span>Shop men's clothing &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Shop ===== -->
+    <section class="shop" id="shop">
+      <div class="container">
+        <div class="shop-head">
+          <div>
+            <p class="eyebrow">The collection</p>
+            <h2 id="shopTitle">All Clothing</h2>
+          </div>
+          <div class="shop-controls">
+            <div class="tabs" role="tablist">
+              <button class="tab active" data-filter="all">All</button>
+              <button class="tab" data-filter="women">Women</button>
+              <button class="tab" data-filter="men">Men</button>
+            </div>
+            <label class="sort">
+              <span>Sort by</span>
+              <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="name">Name A to Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty-msg" id="emptyMsg" hidden>No items in this category yet. Check back soon.</p>
+      </div>
+    </section>
+
+    <!-- ===== How to order ===== -->
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Ordering is simple</p>
+          <h2>How to order on WhatsApp</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Choose your pieces</h3>
+            <p>Browse the collection, pick your size and add items to your bag.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Fill in your details</h3>
+            <p>Enter your name, phone number, city and delivery address at checkout.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Send on WhatsApp</h3>
+            <p>Tap the WhatsApp button. Your full order opens in a chat, ready to send.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-art" aria-hidden="true">
+          <div class="about-card">KHAYR</div>
+        </div>
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2>Clothing that fits your life</h2>
+          <p class="sub">KHAYR was founded on a simple idea: good clothes should be comfortable, well made and easy to wear. Every piece is chosen for its fabric, fit and finish, so you can look your best from morning to night.</p>
+          <ul class="checks">
+            <li>Carefully selected fabrics</li>
+            <li>Sizes for every body type</li>
+            <li>Personal service on WhatsApp</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="reviews">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Customer love</p>
+          <h2>What our customers say</h2>
+          <p class="sub muted-note">Sample reviews for this demo.</p>
+        </div>
+        <div class="review-grid">
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“The fabric is soft and the fit is exactly as shown. I ordered three pieces and the whole process on WhatsApp took minutes.”</p>
+            <cite>Abena S., Accra</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“The floral midi dress got so many compliments at my cousin's wedding. Delivery to Kumasi was quick and well packed.”</p>
+            <cite>Nana Adwoa, Kumasi</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★☆</div>
+            <p>“Great everyday hoodies and joggers. The sizing chart was accurate and the team answered my questions quickly.”</p>
+            <cite>Kofi M., Takoradi</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+      <div class="container narrow">
+        <div class="section-head center">
+          <p class="eyebrow">Help</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <details>
+          <summary>How do I choose my size?</summary>
+          <p>Sizes run from XS to XXL depending on the item. Each product window shows the sizes available. If you are between two sizes, we recommend the larger one. You can also message us on WhatsApp for help.</p>
+        </details>
+        <details>
+          <summary>How long does delivery take?</summary>
+          <p>Accra usually takes 1 to 2 working days. Other regions usually take 2 to 5 working days. Delivery is free on orders over GH₵ 400.</p>
+        </details>
+        <details>
+          <summary>Can I exchange an item?</summary>
+          <p>Yes. You can exchange unworn items with their tags attached within 7 days of delivery.</p>
+        </details>
+        <details>
+          <summary>How do I pay?</summary>
+          <p>You can pay by Mobile Money or pay on delivery in Accra. In this demo, no real payment is taken.</p>
+        </details>
+        <details>
+          <summary>Can I order a single item on WhatsApp?</summary>
+          <p>Yes. Open any product and tap "Order this on WhatsApp" to send that item straight to us.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2>We are happy to help</h2>
+          <p class="sub">Questions about sizes, orders or delivery? Send us a message any time during opening hours.</p>
+          <ul class="contact-list">
+            <li><strong>Address</strong><span data-config="address"></span></li>
+            <li><strong>Phone</strong><span data-config="phoneDisplay"></span></li>
+            <li><strong>Email</strong><a data-config="email"></a></li>
+            <li><strong>Opening hours</strong><span data-config="hours"></span></li>
+          </ul>
+          <a class="btn btn-whatsapp" id="contactWa" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>Your name
+            <input type="text" required placeholder="Full name">
+          </label>
+          <label>Email or phone
+            <input type="text" required placeholder="How can we reach you?">
+          </label>
+          <label>Message
+            <textarea rows="5" required placeholder="How can we help?"></textarea>
+          </label>
+          <button type="submit" class="btn btn-dark btn-block">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">KHAYR</div>
+        <p class="footer-text">Quality clothing for men and women, made for everyday comfort and style.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#shop" data-filter="women">Women</a>
+        <a href="#shop" data-filter="men">Men</a>
+        <a href="#shop" data-filter="all">All clothing</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="#how">How to order</a>
+        <a href="#faq">FAQ</a>
+        <a href="#faq">Delivery and exchanges</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a id="footerWa" target="_blank" rel="noopener">WhatsApp</a>
+        <span data-config="phoneDisplay"></span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="year"></span> KHAYR. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- ===== Overlay ===== -->
+  <div class="overlay" id="overlay" data-close></div>
+
+  <!-- ===== Product window ===== -->
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="backdrop" data-close></div>
+    <div class="dialog product-dialog">
+      <button class="close-x" data-close aria-label="Close">&times;</button>
+      <div class="product-layout">
+        <div class="product-media" id="modalMedia"></div>
+        <div class="product-info">
+          <p class="meta" id="modalMeta"></p>
+          <h2 id="modalName"></h2>
+          <p class="modal-price" id="modalPrice"></p>
+          <p class="modal-desc" id="modalDesc"></p>
+
+          <div class="option-label">
+            <span>Size</span>
+            <span class="size-help" id="sizeHelp"></span>
+          </div>
+          <div class="size-options" id="sizeOptions"></div>
+
+          <div class="option-label"><span>Quantity</span></div>
+          <div class="qty">
+            <button id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+            <span id="qtyValue">1</span>
+            <button id="qtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+
+          <button class="btn btn-dark btn-block btn-lg" id="addToBagBtn">Add to bag</button>
+          <a class="btn btn-whatsapp btn-block" id="orderNowWa" target="_blank" rel="noopener">Order this on WhatsApp</a>
+          <p class="fine-print">Free delivery on orders over GH₵ 400. 7-day exchanges.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Bag drawer ===== -->
+  <aside class="drawer" id="bagDrawer" aria-label="Your bag">
+    <div class="drawer-head">
+      <h2>Your bag</h2>
+      <button class="close-x static" data-close aria-label="Close bag">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <p class="empty-bag" id="bagEmpty">Your bag is empty. Discover pieces you will love.</p>
+      <div id="bagItems"></div>
+    </div>
+    <div class="drawer-foot" id="bagFooter" hidden>
+      <p class="free-note" id="freeNote"></p>
+      <div class="sum-row"><span>Subtotal</span><span id="bagSubtotal"></span></div>
+      <div class="sum-row"><span>Delivery</span><span id="bagDelivery"></span></div>
+      <div class="sum-row total"><span>Total</span><span id="bagTotal"></span></div>
+      <button class="btn btn-dark btn-block btn-lg" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ===== Checkout modal ===== -->
+  <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="backdrop" data-close></div>
+    <div class="dialog checkout-dialog">
+      <button class="close-x" data-close aria-label="Close">&times;</button>
+      <h2 id="checkoutTitle">Checkout</h2>
+
+      <div class="checkout-summary">
+        <ul id="checkoutLines"></ul>
+        <div class="sum-row"><span>Subtotal</span><span id="sumSubtotal"></span></div>
+        <div class="sum-row"><span>Delivery</span><span id="sumDelivery"></span></div>
+        <div class="sum-row total"><span>Total</span><span id="sumTotal"></span></div>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <div class="form-grid">
+          <label>Full name *
+            <input type="text" id="custName" required autocomplete="name" placeholder="e.g. Ama Mensah">
+          </label>
+          <label>Phone number *
+            <input type="tel" id="custPhone" required autocomplete="tel" placeholder="e.g. 0241234567">
+          </label>
+          <label>Email (optional)
+            <input type="email" id="custEmail" autocomplete="email" placeholder="you@example.com">
+          </label>
+          <label>City *
+            <select id="custCity" required>
+              <option value="Accra">Accra</option>
+              <option value="Kumasi">Kumasi</option>
+              <option value="Takoradi">Takoradi</option>
+              <option value="Tamale">Tamale</option>
+              <option value="Cape Coast">Cape Coast</option>
+              <option value="Other">Other region</option>
+            </select>
+          </label>
+        </div>
+        <label>Delivery address *
+          <input type="text" id="custAddress" required autocomplete="street-address" placeholder="Area, street and nearest landmark">
+        </label>
+        <label>Order note (optional)
+          <textarea id="custNote" rows="2" placeholder="e.g. Please gift wrap"></textarea>
+        </label>
+
+        <fieldset class="payment">
+          <legend>Payment method</legend>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="momo" checked>
+            <span><strong>Mobile Money</strong><small>MTN, Telecel or AirtelTigo (demo)</small></span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="cod">
+            <span><strong>Pay on delivery</strong><small>Cash when your order arrives (Accra)</small></span>
+          </label>
+        </fieldset>
+
+        <button type="submit" class="btn btn-whatsapp btn-block btn-lg">Place order on WhatsApp</button>
+        <p class="fine-print center">Tapping the button opens WhatsApp with your full order ready to send.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Confirmation modal ===== -->
+  <div class="modal" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="backdrop" data-close></div>
+    <div class="dialog confirm-dialog center">
+      <div class="tick" aria-hidden="true">&#10003;</div>
+      <h2 id="confirmTitle">Order ready!</h2>
+      <p>Your order number is <strong id="orderNo"></strong></p>
+      <p class="order-total-line">Total: <strong id="orderTotalText"></strong></p>
+      <p class="payment-note" id="paymentNote"></p>
+      <a class="btn btn-whatsapp btn-block btn-lg" id="waOrderBtn" target="_blank" rel="noopener">Send order on WhatsApp</a>
+      <button class="btn btn-outline btn-block" data-close>Continue shopping</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
